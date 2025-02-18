@@ -12,7 +12,7 @@ tabla2 <- read_excel("tabla2.xlsx")
 # Realizar el join por DNI y marcar las discrepancias
 comparacion <- tabla1 %>%
   full_join(tabla2, by = "DNI", suffix = c("_tabla1", "_tabla2")) %>%
-  mutate(tiene_discrepancia = `Nombre Completo_tabla1` != `Nombre Completo_tabla2`) #Nombre Completo es el nombre de una columna
+  mutate(tiene_discrepancia = `Nombre Completo_tabla1` != `Nombre Completo_tabla2`) #Nombre Completo es el nombre de la columna en común
 
 # Crear un nuevo archivo Excel con formato
 wb <- createWorkbook()
