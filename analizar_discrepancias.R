@@ -1,5 +1,5 @@
 # Cargar las librerías necesarias
-rm(list = ls())
+rm(list = ls()) # Limpiar el environment
 library(readxl)
 library(dplyr)
 library(openxlsx)
